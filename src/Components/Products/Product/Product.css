@@ -14,3 +14,8 @@
   background-color: #ffe0b3;
   cursor: pointer;
 }
+
+.add-to-cart:active{
+  color: white;
+  background-color: #FF3030;
+}
