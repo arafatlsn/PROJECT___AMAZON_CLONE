@@ -1,0 +1,16 @@
+.card-items-parent{
+  width: 300px;
+  height: 450px;
+  overflow: hidden;
+}
+
+.img-div img{
+  width: 286px;
+  height: 286px;
+  display: block;
+}
+
+.add-to-cart{
+  background-color: #ffe0b3;
+  cursor: pointer;
+}

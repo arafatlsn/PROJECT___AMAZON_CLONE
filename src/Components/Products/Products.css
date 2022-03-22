@@ -1,0 +1,36 @@
+.products-container{
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.card-parent-div{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  justify-items: center;
+  gap: 3em;
+  padding: 0 16em;
+}
+
+.cart-side{
+  background-color: rgb(255, 224, 179);
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.cart-btn{
+  width: 95%;
+  border-style: hidden;
+  background-color: 
+  #FF3030;
+  color: white
+}
+
+.review-btn{
+  width: 95%;
+  border-style: hidden;
+  background-color: 
+  #FF9900;
+  color: white
+}

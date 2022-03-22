@@ -1,0 +1,30 @@
+.parent-div{
+  background-color: #1C2B35;
+}
+
+.navContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0 21px 146px;
+}
+
+.navContainer img{
+  width: 140px;
+  height: 43px;
+}
+
+.nav-links-div{
+  padding-right: 140px;
+}
+
+.navContainer a{
+  color: white;
+  font-size: 17px;
+  margin-left: 1.5em;
+  text-decoration: none;
+}
+
+.navContainer a:hover{
+  color: orange;
+}
