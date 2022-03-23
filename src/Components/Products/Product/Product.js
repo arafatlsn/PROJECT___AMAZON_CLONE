@@ -6,40 +6,6 @@ import './Product.css'
 const Product = ({products, cartFunction}) => {
   // {products, cartFunction}
   const {img, name, price, seller, ratings, quantity} = products;
-  // const setLocalStrg = () => {
-  //   const getProduct = localStorage.getItem('shoping-cart');
-  //   let productObj;
-  //   let productObjSub;
-
-  //   if(getProduct){
-  //     const productObjGet = localStorage.getItem('shoping-cart');
-  //     productObj = JSON.parse(productObjGet);
-  //     const forTest = (productObj[name.split(' ')])
-  //     console.log(forTest)
-  //     productObjSub = {};
-
-  //     productObjSub['name'] = name;
-  //     productObjSub['price'] = price;
-  //     productObjSub['quantity'] = 1;
-  //     productObj[name.split(' ')] = productObjSub;
-
-  //     localStorage.setItem('shoping-cart', JSON.stringify(productObj))
-
-
-  //   }
-  //   else{
-  //     productObj = {};
-  //     productObjSub = {};
-
-  //     productObjSub['name'] = name;
-  //     productObjSub['price'] = price;
-  //     productObjSub['quantity'] = 1;
-  //     productObj[name.split(' ')] = productObjSub;
-
-  //     localStorage.setItem('shoping-cart', JSON.stringify(productObj))
-
-  //   }
-  // }
   return (
     <div className='card-items-parent border'>
       <div className='card-items-div p-1'>

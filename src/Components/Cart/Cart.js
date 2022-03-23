@@ -14,7 +14,7 @@ const Cart = ({cart, setCart}) => {
             <p>Total Price: <span>$</span>{cart.reduce((previous, current) => previous + current.price, 0)}</p>
             <p>Total Shipping Charge: <span>$</span>{cart.length * 20}</p>
             <p>Tax: <span>$</span>{(cart.reduce((previous, current) => previous + current.price, 0) * .2).toFixed(2)}</p>
-            <h5>Grand Total: <span>$</span>{(cart.reduce((previous, current) => previous + current.price, 0)) + (cart.reduce((previous, current) => previous + current.price, 0) * .2)}</h5>
+            <h5>Grand Total: <span>$</span>{(cart.reduce((previous, current) => previous + current.price, 0)) + (cart.reduce((previous, current) => previous + current.price, 0) * .2) + cart.length * 20}</h5>
           </div>
         </div>
         <div className='d-flex flex-column align-items-center'>
