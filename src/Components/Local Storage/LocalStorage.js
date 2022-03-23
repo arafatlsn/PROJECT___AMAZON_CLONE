@@ -21,7 +21,14 @@ const loadDataStrg = () => {
   if(getProduct){
     localArray = JSON.parse(getProduct)
   }
+  else{
+    localArray = [];
+  }
   return localArray
 };
 
-export { setLocalStrg, loadDataStrg };
+const removeStorage = () => {
+  const removeStr = localStorage.setItem('shoping-cart', []);
+}
+
+export { setLocalStrg, loadDataStrg, removeStorage };

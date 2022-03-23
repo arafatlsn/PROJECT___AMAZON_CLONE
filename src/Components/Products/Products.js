@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Product from './Product/Product';
 import './Products.css'
-import  { setLocalStrg, loadDataStrg } from '../Local Storage/LocalStorage'
+import  { setLocalStrg, loadDataStrg, removeStorage } from '../Local Storage/LocalStorage'
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -18,11 +18,10 @@ const Products = () => {
   useEffect(() => {
     const getDataStrg = loadDataStrg();
     setCart(getDataStrg)
-  }, [])
+  }, [cart])
 
   const addToCart = product => {
     const newCart = [...cart, product];
-    console.log(newCart)
     setCart(newCart)
     setLocalStrg(product)
   }
@@ -39,7 +38,7 @@ const Products = () => {
             ></Product>)
         }
       </div>
-      <Cart cart={cart} setCart={setCart}></Cart>
+      <Cart cart={cart} setCart={removeStorage}></Cart>
   </div>
   );
 };
