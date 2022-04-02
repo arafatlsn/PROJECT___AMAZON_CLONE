@@ -27,8 +27,14 @@ const loadDataStrg = () => {
   return localArray
 };
 
+const removeItem = itemName => {
+  const allData = JSON.parse(localStorage.getItem('shoping-cart'));
+  const filt = allData.filter(elData => elData.name != itemName);
+  localStorage.setItem('shoping-cart', JSON.stringify(filt))
+}
+
 const removeStorage = () => {
   const removeStr = localStorage.setItem('shoping-cart', []);
 }
 
-export { setLocalStrg, loadDataStrg, removeStorage };
+export { setLocalStrg, loadDataStrg, removeStorage, removeItem };

@@ -4,28 +4,18 @@ import Cart from '../Cart/Cart';
 import Product from './Product/Product';
 import './Products.css'
 import  { setLocalStrg, loadDataStrg, removeStorage } from '../Local Storage/LocalStorage'
+import useProducts from '../../Hooks/useProducts';
+import useCart from '../../Hooks/useCart';
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState([]);
-
-  useEffect(() => {
-    fetch('products.json')
-    .then(res => res.json())
-    .then(data => setProducts(data))
-  }, [])
-
-  useEffect(() => {
-    const getDataStrg = loadDataStrg();
-    setCart(getDataStrg)
-  }, [cart])
-
+  const [products, setProducts] = useProducts();
+  const [cart, setCart] = useCart();
+  
   const addToCart = product => {
     const newCart = [...cart, product];
     setCart(newCart)
     setLocalStrg(product)
   }
-
 
   return (
     <div className='products-container'>
@@ -38,7 +28,7 @@ const Products = () => {
             ></Product>)
         }
       </div>
-      <Cart cart={cart} setCart={removeStorage}></Cart>
+      <Cart cart={cart} setCart={removeStorage}>Order Review</Cart>
   </div>
   );
 };

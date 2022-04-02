@@ -1,8 +1,10 @@
 import React from 'react';
 import { faArrowRight, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
-const Cart = ({cart, setCart}) => {
+const Cart = props => {
+  const {cart, setCart} = props;
   return (
     <div className='cart-side'>
       <h4 className='text-center mt-4'>
@@ -19,7 +21,8 @@ const Cart = ({cart, setCart}) => {
         </div>
         <div className='d-flex flex-column align-items-center'>
           <button onClick={() => setCart([])} className='cart-btn rounded my-1 py-1'>Clear Cart <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon></button>
-          <button className='review-btn rounded my-1 py-1'>Review Order <FontAwesomeIcon icon={faArrowRight} /></button>
+            <button className='review-btn rounded my-1 py-1'> 
+          <Link to={'/order-review'} className = 'text-white no-underline font-medium'>{props.children} <FontAwesomeIcon icon={faArrowRight} /></Link></button>
         </div>
     </div>
   );
